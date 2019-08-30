@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: common-mapper01
+  datasource:
+    url: jdbc:mysql://192.168.100.165:3306/common-mapper?useUnicode=true&characterEncoding=utf8&mysqlEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+#
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+    - tk.mybatis.mapper.common.Mapper2
+  notEmpty: true
+logging:
+  level:
+    com.kingboya.common.mapper: debug
